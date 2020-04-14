@@ -1,0 +1,28 @@
+
+    <%- include("header")-%>
+    <br><br>
+
+    <br><br>
+    <div class="container">
+<h2>Home</h2>
+      <p>On projection apartments unsatiable so if he entreaties appearance. Rose you wife how set lady half wish. Hard sing an in true felt. Welcomed stronger if steepest ecstatic an suitable finished of oh. Entered at excited at forming between so produce. Chicken unknown besides attacks gay compact out you. Continuing no simplicity no favourable on reasonably melancholy estimating. Own hence views two ask right whole ten seems. What near kept met call old west dine. Our announcing sufficient why pianoforte.
+</p><br>
+ <%for(var i=0;i<titles.length;++i){%>
+<div class="container">
+  <h4><%= titles[i][0] %></h4>
+<%  if (titles[i][1].length > 100) { %>
+  <%  var tp= titles[i][1].substr(0,100) + '  ...'; %>
+<p>  <%= tp %>
+<form action="/viewpage" method="post">
+  <button type="submit" class="btn btn-outline-secondary btn-sm" name="alink" value="<%= i %>">Read More</button>
+</form>
+</p>
+<%}else{%>
+
+  <p><%= titles[i][1] %></p>
+<%}%>
+</div>
+
+<%  } %>
+    </div>
+    <%- include("footer")-%>

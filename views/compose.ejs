@@ -1,0 +1,17 @@
+<%-include("header")-%>
+<div class="container">
+  <br><br><br><br>
+  <h4>Compose</h4>
+
+  <form action="/compose" method="post">
+    <label for="title">Title</label>
+    <br>
+    <textarea name="title" rows="1" cols="80"></textarea><br>
+    <label for="Post">Post</label><br>
+    <textarea name="content" rows="8" cols="80"></textarea>
+    <br>
+    <button type="submit" class="btn btn-secondary">Publish</button>
+  </form>
+
+</div>
+<%-include("footer")-%>
